@@ -23,7 +23,8 @@ body {
 
 h1, h2:not(.contents-title), h3, h4 {
   color: #3c454e;
-  font-family: "Rubik", sans-serif;
+  font-family: rubik, sans-serif;
+  font-weight: 500;
 }
 
 h1 {
@@ -37,7 +38,6 @@ h1 {
 h2:not(.contents-title) {
   color: #334a89;
   font-size: 1.272rem;
-  font-weight: 600;
   letter-spacing: 2px;
   line-height: 1.25em;
   text-align: center;
@@ -47,14 +47,12 @@ h2:not(.contents-title) {
 
 h3 {
   font-size: 1.618rem;
-  font-weight: 500;
   line-height: 1.2em;
   padding: 1.55rem 0 0.775rem;
 }
 
 h4 {
   font-size: 1rem;
-  font-weight: 500;
   line-height: 1.3em;
   padding-bottom: 0.5em;
 }
@@ -68,7 +66,7 @@ p.big {
 }
 p.tagline {
   color: #666d74;
-  font-family: "Rubik", sans-serif;
+  font-family: rubik, sans-serif;
   font-size: 1.183rem;
   line-height: 1.3em;
   padding-bottom: 0;
@@ -116,20 +114,29 @@ img {
   width: 100%;
   height: auto;
 }
+img.xs {
+  width: 40%;
+}
+img.sm {
+  width: 65%;
+}
+img.md {
+  width: 75%;
+}
 
 figure {
   color: #666d74;
   font-size: 0.887rem;
-  padding: 0.775rem 0 1.55rem;
+  padding-top: 0.775rem;
   text-align: center;
 }
 figure figcaption {
-  margin-top: 0.775rem;
+  padding: 0.775rem 0 1.55rem;
 }
 
 nav:not(.contents) {
-  font-family: "Rubik", sans-serif;
-  padding: 3.1rem 0 1.55rem;
+  font-family: rubik, sans-serif;
+  padding: 8vh 0 4vh;
   text-transform: uppercase;
 }
 nav:not(.contents) .nav {
@@ -198,7 +205,7 @@ nav:not(.contents)#nav-index .right a:hover {
   margin: 1.55rem 9.375% 0;
   border-top: 1px solid #3c454e;
   color: #3c454e;
-  font-family: "Rubik", sans-serif;
+  font-family: rubik, sans-serif;
   font-size: 0.786rem;
   letter-spacing: 0.4px;
   padding: 0.775rem 1% 1.55rem;
@@ -241,6 +248,9 @@ nav:not(.contents)#nav-index .right a:hover {
     text-align: right;
   }
 }
+.footer .right .space {
+  padding-left: 0.8em;
+}
 .footer p {
   padding-bottom: 0;
 }
@@ -255,16 +265,35 @@ nav:not(.contents)#nav-index .right a:hover {
   grid-area: 1/1/3/2;
 }
 .text h2, .text h3, .text h4:not(.list-h4), .text p:not(.tagline), .text figure:not(.hero), .text .list {
-  margin: 0 6.25%;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
 }
 @media (min-width: 768px) {
   .text h2, .text h3, .text h4:not(.list-h4), .text p:not(.tagline), .text figure:not(.hero), .text .list {
-    margin: 0 34.375% 0 9.375%;
+    margin-left: 9.375%;
+    margin-right: 34.375%;
   }
 }
 @media (min-width: 1200px) {
   .text h2, .text h3, .text h4:not(.list-h4), .text p:not(.tagline), .text figure:not(.hero), .text .list {
-    margin: 0 31.25% 0 18.75%;
+    margin-left: 18.75%;
+    margin-right: 31.25%;
+  }
+}
+.text figure.updish-screens {
+  margin-left: 3.125%;
+  margin-right: 3.125%;
+}
+@media (min-width: 768px) {
+  .text figure.updish-screens {
+    margin-left: 3.125%;
+    margin-right: 28.125%;
+  }
+}
+@media (min-width: 1200px) {
+  .text figure.updish-screens {
+    margin-left: 12.5%;
+    margin-right: 25%;
   }
 }
 .text .banner {
@@ -324,6 +353,19 @@ nav:not(.contents)#nav-index .right a:hover {
   padding-bottom: 0.5em;
 }
 
+#results {
+  /*
+  .typography {
+      @include media(tablet) {
+          display: grid;
+          grid-template-columns: 2;
+          @include grid-row(1);
+          .type-left { @include area(mobile, 1, 1, 2, 2) }
+          .type-right { @include area(mobile, 1, 2, 2, 3) }
+      }
+  }
+  */
+}
 #results .button {
   margin-top: 1.55rem;
   margin-bottom: 1.55rem;
@@ -347,7 +389,7 @@ nav:not(.contents)#nav-index .right a:hover {
   color: #f8f3f2;
   border: 1.5px solid #71534c;
   border-radius: 20px;
-  font-family: "Rubik", sans-serif;
+  font-family: rubik, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   display: block;
@@ -369,7 +411,7 @@ nav:not(.contents)#nav-index .right a:hover {
 
 .contents {
   display: none;
-  font-family: "Rubik", sans-serif;
+  font-family: rubik, sans-serif;
   font-size: 0.786rem;
   letter-spacing: 0.4px;
   line-height: 1.2em;
@@ -415,7 +457,7 @@ nav:not(.contents)#nav-index .right a:hover {
 .contents .contents-title {
   color: #3c454e;
   font-size: 1.272rem;
-  font-weight: 600;
+  font-weight: 500;
   padding-bottom: 0.5em;
 }
 .contents li {
@@ -450,8 +492,8 @@ main > nav {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 30% 70%;
   width: 100vw;
-  height: 100vh;
-  max-height: 900px;
+  height: 75vh;
+  max-height: 675px;
   /*
   background: {
       color: $navy;
@@ -459,6 +501,10 @@ main > nav {
       position: 0 0, 27% 55%;
       repeat: no-repeat, no-repeat;
       size: cover, 740px 70%;
+  }
+  @include media(tablet) {
+      background-position: 0 0, 27% 60%;
+      background-size: cover, 740px auto;
   }
   */
   background-color: #243461;
@@ -470,13 +516,7 @@ main > nav {
 }
 @media (min-width: 768px) {
   .index-banner {
-    grid-template-rows: 35% 65%;
-  }
-}
-@media (min-width: 768px) {
-  .index-banner {
-    background-position: 0 0, 27% 60%;
-    background-size: cover, 740px auto;
+    grid-template-rows: 15% 85%;
   }
 }
 .index-banner nav {
@@ -485,31 +525,40 @@ main > nav {
 }
 @media (min-width: 768px) {
   .index-banner nav {
-    padding-top: 15vh;
+    padding-top: 12vh;
   }
 }
-.index-banner h1 {
+.index-banner .welcome {
   grid-area: 2/1/3/2;
-  margin: 0 6.25%;
-  color: #eceef6;
-  font-size: 2.321rem;
-  font-weight: 500;
-  padding: auto 0;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
 }
 @media (min-width: 768px) {
-  .index-banner h1 {
-    margin: 0 15.625%;
-  }
-}
-@media (min-width: 992px) {
-  .index-banner h1 {
-    margin: 0 34.375% 0 15.625%;
+  .index-banner .welcome {
+    margin-left: 15.625%;
+    margin-right: 15.625%;
   }
 }
 @media (min-width: 1200px) {
-  .index-banner h1 {
-    margin: 0 37.5% 0 18.75%;
+  .index-banner .welcome {
+    margin-left: 20.3125%;
+    margin-right: 35.9375%;
   }
+}
+@media (min-width: 768px) {
+  .index-banner .welcome {
+    padding-top: 14vh;
+  }
+}
+@media (min-width: 1200px) {
+  .index-banner .welcome {
+    padding-top: 12vh;
+  }
+}
+.index-banner h1 {
+  color: #eceef6;
+  font-size: 2.321rem;
+  font-weight: 500;
 }
 
 .index-body {
@@ -575,7 +624,7 @@ main > nav {
 }
 #portfolio a section p {
   color: #666d74;
-  font-family: "Rubik", sans-serif;
+  font-family: rubik, sans-serif;
 }
 #portfolio a section p.feat-tag {
   font-size: 1.272rem;
@@ -584,6 +633,45 @@ main > nav {
 }
 #portfolio a:hover {
   border: none;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+.about .about-text, .about .about-img {
+  padding: 1.55rem 5% 0;
+}
+.about .about-text {
+  grid-area: 1/1/2/17;
+}
+@media (min-width: 768px) {
+  .about .about-text {
+    grid-area: 1/3/2/15;
+  }
+}
+@media (min-width: 1200px) {
+  .about .about-text {
+    grid-area: 1/8/3/14;
+  }
+}
+.about .about-text h1 {
+  font-size: 2.058rem;
+}
+.about .about-img {
+  grid-area: 2/2/3/16;
+  margin: auto 0;
+}
+@media (min-width: 768px) {
+  .about .about-img {
+    grid-area: 2/5/3/13;
+  }
+}
+@media (min-width: 1200px) {
+  .about .about-img {
+    grid-area: 1/4/3/8;
+  }
 }
 
 .bar-container, .bar {
