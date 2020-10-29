@@ -1,35 +1,23 @@
-/*
-$base: 1.55rem;
-$base-half: $base/2;
-$base-one-half: $base * 1.5;
-$base-twice: $base * 2;
-*/
 html {
-  font-size: 18px;
+  font-size: 17px;
   scroll-behavior: smooth;
 }
 @media (min-width: 768px) {
-  html {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1200px) {
   html {
     font-size: 21px;
   }
 }
 
 body {
-  background: #eef2f6;
+  background: #f1f5f8;
   color: #131e29;
-  font-family: utopia-std, serif;
-  line-height: 1.55em;
+  font-family: rubik, sans-serif;
+  line-height: 1.4rem;
   margin: 0 auto;
 }
 
-h1, h2:not(.contents-title), h3, h4 {
+h1, h2, h3, h4 {
   color: #3c454e;
-  font-family: rubik, sans-serif;
   font-weight: 500;
 }
 
@@ -38,23 +26,30 @@ h1 {
   font-size: 2.6180339887rem;
   font-weight: 700;
   line-height: 1.1em;
-  padding-bottom: 16px;
+  padding-bottom: 0.7rem;
+}
+h1.small {
+  font-size: 2.0581710273rem;
 }
 
-h2:not(.contents-title) {
+h2 {
   color: #334a89;
-  font-size: 1.2720196495rem;
-  letter-spacing: 2px;
-  line-height: 1.25em;
-  text-align: center;
+  font-size: 1.6180339887rem;
+  letter-spacing: 1px;
+  line-height: 1.2em;
   text-transform: uppercase;
-  padding: 32px 0 32px;
+  padding-top: 2.1rem;
+  padding-bottom: 0.7rem;
 }
 
 h3 {
-  font-size: 1.6180339887rem;
-  line-height: 1.2em;
-  padding: 32px 0 16px;
+  font-size: 1.2720196495rem;
+  line-height: 1.25em;
+  padding-bottom: 0.7rem;
+}
+
+p + h3 {
+  padding-top: 1.4rem;
 }
 
 h4 {
@@ -63,9 +58,6 @@ h4 {
   padding-bottom: 0.5em;
 }
 
-p {
-  padding-bottom: 32px;
-}
 p.big {
   font-size: 1.1834384463rem;
   line-height: 1.45em;
@@ -78,13 +70,18 @@ p.tagline {
   padding-bottom: 0;
 }
 
+main p {
+  font-family: utopia-std, serif;
+  padding-bottom: 1.4rem;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 a:not(.error):hover {
-  border-bottom: 2px solid #71534c;
-  color: #71534c;
+  border-bottom: 2px solid #846158;
+  color: #846158;
 }
 a.error {
   border-bottom: 2px solid #fcfcfd;
@@ -94,7 +91,7 @@ a.error:hover {
 }
 
 .text a {
-  border-bottom: 2px solid #71534c;
+  border-bottom: 2px solid #846158;
 }
 
 strong {
@@ -103,23 +100,6 @@ strong {
 
 em {
   font-style: italic;
-}
-
-hr {
-  border: none;
-  border-bottom: 8px dotted #666d74;
-  margin: 0 40.625%;
-  padding-top: 64px;
-}
-@media (min-width: 768px) {
-  hr {
-    margin: 0 56.25% 0 31.25%;
-  }
-}
-@media (min-width: 1200px) {
-  hr {
-    margin: 0 53.125% 0 40.625%;
-  }
 }
 
 img {
@@ -138,16 +118,16 @@ img.md {
 
 figure {
   color: #666d74;
+  font-family: utopia-std, serif;
   font-size: 0.8866517793rem;
-  padding: 16px 0 32px;
+  padding-bottom: 1.4rem;
   text-align: center;
 }
 figure figcaption {
-  margin-top: 16px;
+  margin-top: 0.7rem;
 }
 
 nav:not(.contents) {
-  font-family: rubik, sans-serif;
   padding: 8vh 0 4vh;
   text-transform: uppercase;
 }
@@ -205,12 +185,7 @@ nav:not(.contents) p {
   padding: 0;
 }
 nav:not(.contents) .space {
-  padding-left: 0.8em;
-}
-@media (min-width: 768px) {
-  nav:not(.contents) .space {
-    padding-left: 1.5em;
-  }
+  padding-left: 1.5em;
 }
 @media (min-width: 1200px) {
   nav:not(.contents) .space {
@@ -225,61 +200,67 @@ nav:not(.contents)#nav-index .right a:hover {
   color: #fcfcfd;
 }
 
-.footer {
+footer {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
-  margin: 32px 9.375% 0;
+  margin-top: 1.4rem;
+  margin-left: 9.375%;
+  margin-right: 9.375%;
   border-top: 1px solid #3c454e;
   color: #3c454e;
-  font-family: rubik, sans-serif;
   font-size: 0.7861513778rem;
   letter-spacing: 0.4px;
-  padding: 16px 1% 32px;
+  line-height: 1.35em;
+  padding-top: 0.7rem;
+  padding-bottom: 1.4rem;
   text-align: center;
 }
 @media (min-width: 768px) {
-  .footer {
-    margin: 32px 12.5% 0;
+  footer {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
   }
 }
 @media (min-width: 1200px) {
-  .footer {
-    margin: 32px 15.625% 0;
+  footer {
+    margin-left: 15.625%;
+    margin-right: 15.625%;
   }
 }
-.footer .left {
+footer .footer-left {
   grid-area: 2/1/3/3;
 }
 @media (min-width: 1200px) {
-  .footer .left {
+  footer .footer-left {
     grid-area: 1/1/3/2;
   }
 }
 @media (min-width: 1200px) {
-  .footer .left {
+  footer .footer-left {
     text-align: left;
   }
 }
-.footer .right {
+footer .footer-right {
   grid-area: 1/1/2/3;
   text-transform: uppercase;
 }
 @media (min-width: 1200px) {
-  .footer .right {
+  footer .footer-right {
     grid-area: 1/2/3/3;
   }
 }
 @media (min-width: 1200px) {
-  .footer .right {
+  footer .footer-right {
     text-align: right;
   }
 }
-.footer .right .space {
+footer .footer-right .space {
   padding-left: 0.8em;
 }
-.footer p {
-  padding-bottom: 0;
+footer .footer-left, footer .footer-right {
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .case-study {
@@ -290,6 +271,13 @@ nav:not(.contents)#nav-index .right a:hover {
 
 .text {
   grid-area: 1/1/3/2;
+  /*
+  figure.updish-screens {
+      @include margin(mobile, 0.5, 0.5);
+      @include margin(tablet, 2, 5);
+      @include margin(desktop, 2, 5);
+  }
+  */
 }
 .text h2, .text h3, .text h4:not(.list-h4), .text p:not(.tagline), .text figure:not(.hero), .text .list {
   margin-left: 6.25%;
@@ -297,30 +285,14 @@ nav:not(.contents)#nav-index .right a:hover {
 }
 @media (min-width: 768px) {
   .text h2, .text h3, .text h4:not(.list-h4), .text p:not(.tagline), .text figure:not(.hero), .text .list {
-    margin-left: 9.375%;
-    margin-right: 34.375%;
+    margin-left: 12.5%;
+    margin-right: 31.25%;
   }
 }
 @media (min-width: 1200px) {
   .text h2, .text h3, .text h4:not(.list-h4), .text p:not(.tagline), .text figure:not(.hero), .text .list {
     margin-left: 18.75%;
-    margin-right: 31.25%;
-  }
-}
-.text figure.updish-screens {
-  margin-left: 3.125%;
-  margin-right: 3.125%;
-}
-@media (min-width: 768px) {
-  .text figure.updish-screens {
-    margin-left: 3.125%;
-    margin-right: 28.125%;
-  }
-}
-@media (min-width: 1200px) {
-  .text figure.updish-screens {
-    margin-left: 12.5%;
-    margin-right: 25%;
+    margin-right: 37.5%;
   }
 }
 .text .banner {
@@ -330,12 +302,12 @@ nav:not(.contents)#nav-index .right a:hover {
 }
 @media (min-width: 768px) {
   .text .banner {
-    margin: 0 3.125% 16px;
+    margin: 0 3.125% 0.7rem;
   }
 }
 .text .banner .hero {
   grid-area: 2/1/3/3;
-  padding-bottom: 16px;
+  padding-bottom: 0.7rem;
 }
 @media (min-width: 1200px) {
   .text .banner .hero {
@@ -370,13 +342,16 @@ nav:not(.contents)#nav-index .right a:hover {
 }
 .text .list {
   background: #d7dfe7;
-  padding: 4% 5%;
-  margin-bottom: 32px;
+  padding: 3vw 4vw;
+  margin-bottom: 1.4rem;
 }
 @media (min-width: 768px) {
   .text .list {
     padding: 2% 3%;
   }
+}
+.text .list ul {
+  font-family: utopia-std, serif;
 }
 .text .list li {
   font-size: 0.8866517793rem;
@@ -399,27 +374,27 @@ nav:not(.contents)#nav-index .right a:hover {
   */
 }
 #results .button {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
   margin-left: 6.25%;
   margin-right: 6.25%;
 }
 @media (min-width: 768px) {
   #results .button {
-    margin-left: 9.375%;
-    margin-right: 34.375%;
+    margin-left: 12.5%;
+    margin-right: 31.25%;
   }
 }
 @media (min-width: 1200px) {
   #results .button {
     margin-left: 18.75%;
-    margin-right: 31.25%;
+    margin-right: 37.5%;
   }
 }
 #results button {
-  background: #71534c;
+  background: #846158;
   color: #f8f3f2;
-  border: 1.5px solid #71534c;
+  border: 1.5px solid #846158;
   border-radius: 20px;
   font-family: rubik, sans-serif;
   font-size: 1rem;
@@ -433,8 +408,8 @@ nav:not(.contents)#nav-index .right a:hover {
   transition: 50ms linear;
 }
 #results button:hover {
-  background: #eef2f6;
-  color: #71534c;
+  background: #f1f5f8;
+  color: #846158;
 }
 #results p {
   font-size: 0.8866517793rem;
@@ -443,13 +418,16 @@ nav:not(.contents)#nav-index .right a:hover {
 
 .contents {
   display: none;
-  font-family: rubik, sans-serif;
+  align-self: start;
+  position: sticky;
+  top: 18%;
   font-size: 0.7861513778rem;
   letter-spacing: 0.4px;
-  line-height: 1.2em;
+  line-height: 1.35em;
   border-left: 1px solid #3c454e;
-  padding: 1% 0 1% 1.5%;
-  transition: 300ms ease;
+  opacity: 0.7;
+  padding: 1% 1.5%;
+  transition: opacity 300ms ease;
 }
 @media (min-width: 768px) {
   .contents {
@@ -463,52 +441,27 @@ nav:not(.contents)#nav-index .right a:hover {
 }
 @media (min-width: 768px) {
   .contents {
-    margin-left: 75%;
-    margin-right: 3.125%;
-  }
-}
-@media (min-width: 1200px) {
-  .contents {
     margin-left: 78.125%;
-    margin-right: 3.125%;
-  }
-}
-@media (min-width: 768px) {
-  .contents {
-    opacity: 0.8;
+    margin-right: 0%;
   }
 }
 @media (min-width: 1200px) {
   .contents {
-    opacity: 0.7;
+    margin-left: 71.875%;
+    margin-right: 3.125%;
   }
 }
 .contents:hover {
   opacity: 1;
 }
-.contents .contents-title {
-  color: #3c454e;
-  font-size: 1.2720196495rem;
-  font-weight: 500;
+.contents li:not(.last) {
   padding-bottom: 0.5em;
-}
-.contents li {
-  padding-bottom: 0.5em;
-}
-.contents ol ol li {
-  margin-left: 10%;
 }
 .contents a {
   color: #666d74;
 }
 .contents a:hover {
-  color: #71534c;
-}
-
-main > nav {
-  align-self: start;
-  position: sticky;
-  top: 18%;
+  color: #846158;
 }
 
 .contents li.active > a {
@@ -516,38 +469,21 @@ main > nav {
   font-weight: 500;
 }
 .contents li.active > a:hover {
-  color: #71534c;
+  color: #846158;
 }
 
 .index-banner {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, auto);
-  /*
-  background: {
-      color: $navy;
-      image: url(../img/texture-rc.png), url(../img/paper-welcome.svg);
-      position: 0 0, 27% 55%;
-      repeat: no-repeat, no-repeat;
-      size: cover, 740px 70%;
-  }
-  @include media(tablet) {
-      background-position: 0 0, 27% 60%;
-      background-size: cover, 740px auto;
-  }
-  */
-  background-color: #243461;
-  background-image: url(../img/texture-rc.png);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #243461;
   box-shadow: 0 0 0 1vw #fcfcfd inset;
 }
 .index-banner nav {
   grid-area: 1/1/2/2;
 }
 .index-banner .welcome {
-  padding: 16px 0 64px;
+  padding: 0.7rem 0 64px;
 }
 @media (min-width: 768px) {
   .index-banner .welcome {
@@ -568,7 +504,7 @@ main > nav {
   grid-area: 2/1/3/2;
   margin-left: 3.125%;
   margin-right: 3.125%;
-  padding: 48px 6.25% 72px;
+  padding: 2.1rem 6.25% 72px;
 }
 @media (min-width: 768px) {
   .index-banner .h1 {
@@ -584,7 +520,7 @@ main > nav {
 }
 @media (min-width: 1200px) {
   .index-banner .h1 {
-    padding: 48px 1.5625% 72px 4.6875%;
+    padding: 2.1rem 1.5625% 72px 4.6875%;
   }
 }
 .index-banner h1 {
@@ -599,7 +535,7 @@ main > nav {
   grid-template-rows: repeat(3, auto);
   margin-left: 3.125%;
   margin-right: 3.125%;
-  padding: 32px 0;
+  padding: 1.4rem 0;
 }
 @media (min-width: 768px) {
   #portfolio {
@@ -628,8 +564,8 @@ main > nav {
 }
 #portfolio a section {
   border-radius: 8px;
-  margin-bottom: 32px;
-  padding: 16px;
+  margin-bottom: 1.4rem;
+  padding: 0.7rem;
   transition: 250ms ease-in;
 }
 #portfolio a section:hover {
@@ -667,7 +603,7 @@ main > nav {
   grid-template-rows: repeat(2, auto);
 }
 .about .about-text, .about .about-img {
-  padding: 32px 5% 0;
+  padding: 1.4rem 5% 0;
 }
 .about .about-text {
   grid-area: 1/1/2/17;
