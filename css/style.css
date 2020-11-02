@@ -325,6 +325,7 @@ figure {
   color: #666d74;
   font-family: utopia-std, serif;
   font-size: 0.8866517793rem;
+  line-height: 1.4em;
   padding-bottom: 1.5rem;
   text-align: center;
 }
@@ -362,6 +363,11 @@ nav:not(.contents) .nav .left {
 @media (min-width: 768px) {
   nav:not(.contents) .nav .left {
     grid-area: 1/1/3/2;
+  }
+}
+@media (min-width: 768px) {
+  nav:not(.contents) .nav .left {
+    margin: initial;
   }
 }
 nav:not(.contents) .nav .left img {
@@ -485,65 +491,30 @@ footer .footer-left, footer .footer-right {
 .text {
   grid-area: 1/1/3/2;
 }
-.text h2:not(.h2-results), .text h3, .text h4:not(.list-h4), .text p:not(.tagline), .text figure:not(.hero):not(.updish-screens), .text .list {
+.text h1, .text h2:not(.h2-results), .text h3, .text h4:not(.list-h4), .text p, .text figure:not(.hero):not(.updish-screens), .text .list {
   margin-left: 6.25%;
   margin-right: 6.25%;
 }
 @media (min-width: 768px) {
-  .text h2:not(.h2-results), .text h3, .text h4:not(.list-h4), .text p:not(.tagline), .text figure:not(.hero):not(.updish-screens), .text .list {
+  .text h1, .text h2:not(.h2-results), .text h3, .text h4:not(.list-h4), .text p, .text figure:not(.hero):not(.updish-screens), .text .list {
     margin-left: 9.375%;
     margin-right: 28.125%;
   }
 }
 @media (min-width: 1200px) {
-  .text h2:not(.h2-results), .text h3, .text h4:not(.list-h4), .text p:not(.tagline), .text figure:not(.hero):not(.updish-screens), .text .list {
+  .text h1, .text h2:not(.h2-results), .text h3, .text h4:not(.list-h4), .text p, .text figure:not(.hero):not(.updish-screens), .text .list {
     margin-left: 15.625%;
     margin-right: 34.375%;
   }
 }
-.text .banner {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: repeat(2, auto);
-}
-@media (min-width: 768px) {
-  .text .banner {
-    margin: 0 3.125% 0.75rem;
-  }
-}
-.text .banner .hero {
-  grid-area: 2/1/3/3;
-  padding-bottom: 0.75rem;
+.text figure.hero {
+  margin-left: 3.125%;
+  margin-right: 3.125%;
 }
 @media (min-width: 1200px) {
-  .text .banner .hero {
-    grid-area: 1/1/3/2;
-  }
-}
-@media (min-width: 1200px) {
-  .text .banner .hero {
-    padding: 0;
-  }
-}
-.text .banner .title {
-  grid-area: 1/1/2/3;
-  align-self: center;
-  justify-self: center;
-  padding: 4% 10% 2%;
-}
-@media (min-width: 1200px) {
-  .text .banner .title {
-    grid-area: 1/2/3/3;
-  }
-}
-@media (min-width: 768px) {
-  .text .banner .title {
-    padding-top: 6%;
-  }
-}
-@media (min-width: 1200px) {
-  .text .banner .title {
-    padding: 8% 10%;
+  .text figure.hero {
+    margin-left: 9.375%;
+    margin-right: 9.375%;
   }
 }
 .text .list {
