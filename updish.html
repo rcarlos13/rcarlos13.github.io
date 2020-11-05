@@ -19,13 +19,11 @@
 
         <header>
             <nav>
-                <div class="nav">
-                    <div class="left">
-                        <a href="index.html"><img src="img/monogram-navy.png" alt="RC logo" width="1024" height="576"></a>
-                    </div>
-                    <div class="right">
-                        <p><a href="index.html">Portfolio</a><span class="space"></span><a href="about.html">About</a><span class="space"></span><a href="mailto:hey@renzo.design">Contact</a></p>
-                    </div>
+                <div class="left">
+                    <a href="index.html"><img src="img/monogram-navy.png" alt="RC logo" width="1024" height="576"></a>
+                </div>
+                <div class="right">
+                    <p><a href="index.html">Portfolio</a><span class="space"></span><a href="about.html">About</a><span class="space"></span><a href="mailto:hey@renzo.design">Contact</a></p>
                 </div>
             </nav>
         </header>
@@ -77,12 +75,8 @@
                         <h4 class="list-h4">Key interview insights</h4>
                         <ul>
                             <li>First-time customers find that employees generally expect everyone to know how the restaurant works, and so, they never receive proper guidance when ordering.</li>
-                            <!--
-                            <li>People feel they have a social obligation not to hold up the queue, so they become submissive with the decision-making and just hope their order ends up decent.</li>-->
                             <li>When learning how to order at a restaurant, some will only ask employees who look friendly and able to communicate clearly. Others will make someone else order for them instead.</li>
                             <li>Regulars at particular restaurants are often interested in everything those places offer; still, because the seemingly complex menu confounds them, they resort to familiarity and end up buying the same thing.</li>
-                            <!--
-                            <li>Many expressed interest in trying several build-your-own-meal restaurants but are afraid of looking like a ‘loser’ for not knowing what to do.</li>-->
                             <li>A few individuals admitted they mentally rehearse what they’re going to say when ordering verbatim and panic if asked an unanticipated question.</li>
                         </ul>
                     </div>
@@ -127,12 +121,6 @@
                     </blockquote>
                     <p>One could argue that other approaches such as mobile ordering exist. Yes, people with social anxiety can still buy at build-your-own-meal restaurants without interacting with the employees—but at the end of the day, they still have that stress induced by the idea of talking to someone. I believe that by providing them with a better idea of what to do, they’ll be able to order comfortably right from the start. After all, social anxiety is manageable.</p>
                     <p>My objective was to create a learning platform on the seemingly complex workings of build-your-own-meal restaurants. I envisioned this solution as something like wikiHow or Wikipedia—though more interactive and not so text-heavy.</p>
-                    <!--
-                    <figure>
-                        <img src="img/updish/wikihow.gif" alt="wikiHow GIF" width="600" height="600" class="xs">
-                        <figcaption>Wordy content in wikiHow’s <a href="https://www.wikihow.com/Order-at-Chipotle" target="_blank">“How to Order at Chipotle”</a> guide crammed in a single page.</figcaption>
-                    </figure>
-                    -->
                     <p>Everyone has browsed those platforms on the Web at one point instead of downloading the apps (Did you even know they had apps?). I expected my users would do the same, with them repeatedly referencing my platform until they feel well-informed enough to not return for a long time. Thus, <strong>it made sense to create a <em>website</em> instead of an app.</strong></p>
 
                     <!-- Persona -->
@@ -205,10 +193,6 @@
                     <h3>Usability Testing</h3>
                     <p>While building the early versions of the website, I did some rapid prototyping with my collaborators and peers to see if the designs were going in the right direction regarding the project’s objective. When I felt more confident with the prototype, I conducted usability testing with four actual target users to evaluate its practicality and intuitiveness.</p>
                     <p>The testers’ unanimous feedback was that the journey to reach the Ordering Process pages was too long. Starting from the Home page, users had to visit a minimum of five screens to learn how to order at the restaurant. <strong>My mistake was putting a higher priority on the platform informing users about the restaurants’ menu items.</strong> The testers remarked that they actually care more about learning how to order than anything else.</p>
-                    <!--
-                        My mistake was focusing on how to order a menu item at a restaurant, and not how to order in general.
-                    <p>In addition, the testers noted that the journey to learn multiple things was also too long. I irrationally assumed users only wanted to learn about one thing at a time, so the ordering process fixated on one menu item alone. This meant that a user would need to start from the Restaurant Menu page again if they want to learn how to order a Cappuccino right after a Caffè Latte—despite the two’s Ordering Process pages being nearly identical.</p>
-                    -->
 
                     <figure>
                         <picture>
@@ -218,9 +202,6 @@
                         <figcaption>Updated user flow diagram for UpDish.</figcaption>
                     </figure>
                     <p>As a result of all the feedback, I reiterated the designs so the prototype satisfies the target users’ needs better. The biggest change involved modifying the user flow diagram so users can learn how to order immediately after landing on the Restaurant Info page.</p>
-                    <!--
-                    <p>I also added an ‘Order List’ feature, analogous to a physical list of food orders a person brings when buying lunch at a restaurant on their colleagues’ behalf. The Ordering Process pages reference the menu items added to the Order List, allowing users to learn about multiple foods at the restaurant at a time.</p>
-                    -->
                 </section>
 
                 <!-- Results -->
@@ -240,33 +221,25 @@
                 <!-- Design -->
                 <section id="design">
                     <h2>Design Choices</h2>
-                    <!--
-                    <h3>Voice and Tone</h3>
-                    <p>One key insight revealed in the usability testing was when a non-native English-speaking tester was having difficulty understanding some of the content because it contained idioms and higher-level English words. I realized I need to establish a voice and tone guideline since readable content provides a good user experience, linking back to wikiHow’s issue of providing obscure information.</p>
-                    -->
                     <h3>Colour</h3>
                     <figure>
-                        <img src="img/updish/colours.png" alt="UpDish colours" width="3508" height="2479">
+                        <picture>
+                            <source srcset="img/updish/palette.webp" type="image/webp">
+                            <img src="img/updish/palette.png" alt="UpDish colours">
+                        </picture>
                     </figure>
                     <p>For the main colour, I wanted something associated with food. I found yellow will make the interfaces overly bright, whereas red exudes the feeling of panic, which is the opposite of the platform’s intended outcome. <strong>I chose orange for it represents confidence and optimism,</strong> helping UpDish perfectly embody the role of an uplifting friend.</p>
-                    <!--Incidentally, orange tends to be one of people’s least favourite colours, so I minimized its use as much as possible.-->
                     <p>For the accent colour, although orange’s complementary colour of blue seems like a fitting choice since it represents renewal and relaxation, it’s seldomly associated with food. <strong>I chose green because it also represents growth and calmness,</strong> so my intended users will feel like they’re taking steps to overcome their anxiety in a nourishing environment. I settled on a cool hue of teal that contrasts with orange’s warmth.</p>
-                    <div class="typography">
-                        <div class="type-left">
-                            <h3>Typography</h3>
-                            <figure>
-                                <img src="img/updish/font-tisa.png" alt="FF Tisa Sans font" width="830" height="292" class="md">
-                            </figure>
-                            <p>For the primary typeface used for the headings, I chose FF Tisa Sans, of which the absence of serifs gives it that contemporary look. Best of all, it has this friendly-looking personality, achieved by its slightly rounded strokes and terminals.</p>
-                        </div>
 
-                        <div class="type-right">
-                            <figure>
-                                <img src="img/updish/font-pragmatica.png" alt="Pragmatica" width="784" height="288" class="md">
-                            </figure>
-                            <p>For the secondary typeface used for the body text, I chose Pragmatica, a neutral typeface that harmonizes with my above choice. Both share the same x-height, while many of their glyphs are identical. Pragmatica’s rather stoical characteristic really brings out FF Tisa Sans’ overall friendly personality.</p>
-                        </div>
-                    </div>
+                    <h3>Typography</h3>
+                    <figure>
+                        <img src="img/updish/font-tisa.png" alt="FF Tisa Sans font" width="830" height="292" class="md">
+                    </figure>
+                    <p>For the primary typeface used for the headings, I chose FF Tisa Sans, of which the absence of serifs gives it that contemporary look. Best of all, it has this friendly-looking personality, achieved by its slightly rounded strokes and terminals.</p>
+                    <figure>
+                        <img src="img/updish/font-pragmatica.png" alt="Pragmatica" width="784" height="288" class="md">
+                    </figure>
+                    <p>For the secondary typeface used for the body text, I chose Pragmatica, a neutral typeface that harmonizes with my above choice. Both share the same x-height, while many of their glyphs are identical. Pragmatica’s rather stoical characteristic really brings out FF Tisa Sans’ overall friendly personality.</p>
                 </section>
 
                 <!-- Reflection -->
