@@ -308,11 +308,6 @@ em {
 img {
   width: 100%;
   height: auto;
-  /*
-  &.xs { width: 40%; }
-  &.sm { width: 65%; }
-  &.md { width: 75%; }
-  */
 }
 
 figure {
@@ -322,6 +317,12 @@ figure {
   line-height: 1.4em;
   padding-bottom: 1.5rem;
   text-align: center;
+}
+figure.sm {
+  padding: 0 10% 1.5rem;
+}
+figure.md {
+  padding: 0 5% 1.5rem;
 }
 figure figcaption {
   margin-top: 0.75rem;
