@@ -281,7 +281,7 @@ p.tagline {
   padding-bottom: 0;
 }
 
-main:not(#portfolio) p {
+main p {
   font-family: utopia-std, serif;
   padding-bottom: 1.5rem;
 }
@@ -721,6 +721,7 @@ nav:not(.contents)#nav-index .right a:hover {
 }
 #portfolio a section p {
   color: #6c6d75;
+  font-family: "Rubik", sans-serif;
   padding-bottom: 0.75rem;
 }
 #portfolio a section p.feat-tag {
