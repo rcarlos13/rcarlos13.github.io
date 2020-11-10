@@ -265,10 +265,11 @@ p + h3 {
 h4 {
   font-size: 1rem;
   line-height: 1.3em;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.65em;
 }
 
 p.big {
+  color: #45464f;
   font-size: 1.1834384463rem;
   line-height: 1.45em;
 }
@@ -280,7 +281,7 @@ p.tagline {
   padding-bottom: 0;
 }
 
-main p {
+main:not(#portfolio) p {
   font-family: utopia-std, serif;
   padding-bottom: 1.5rem;
 }
@@ -511,12 +512,13 @@ button:hover {
 
 nav:not(.contents) {
   display: grid;
-  grid-template-columns: 90px auto;
+  grid-template-columns: max-content auto;
   grid-template-rows: repeat(2, auto);
   margin-top: 2.25rem;
   margin-bottom: 1.5rem;
   margin-left: 6.25%;
   margin-right: 6.25%;
+  color: #45464f;
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
@@ -579,10 +581,6 @@ nav:not(.contents) .right {
 }
 nav:not(.contents) .right a:hover {
   border-width: 3px;
-}
-nav:not(.contents) p {
-  color: #45464f;
-  padding: 0;
 }
 nav:not(.contents) .space {
   padding: 0 1.5em;
@@ -652,13 +650,13 @@ nav:not(.contents)#nav-index .right a:hover {
 }
 #index-banner h1 {
   color: #eceef6;
-  font-size: 1.825rem;
+  font-size: 1.8248810035rem;
   font-weight: 500;
   text-align: center;
 }
 @media (min-width: 768px) {
   #index-banner h1 {
-    font-size: 2.321rem;
+    font-size: 2.3212844944rem;
   }
 }
 @media (min-width: 768px) {
@@ -671,9 +669,10 @@ nav:not(.contents)#nav-index .right a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
+  gap: 0 1rem;
+  padding-top: 1.5rem;
   margin-left: 3.125%;
   margin-right: 3.125%;
-  padding: 1.5rem 0;
 }
 @media (min-width: 768px) {
   #portfolio {
@@ -701,35 +700,42 @@ nav:not(.contents)#nav-index .right a:hover {
   }
 }
 #portfolio a section {
-  border-radius: 8px;
+  border: 1px solid #fbfcfd;
+  border-radius: 12px;
   margin-bottom: 1.5rem;
   padding: 0.75rem;
-  transition: background 250ms ease-in;
-}
-#portfolio a section:hover {
-  background: #e2e8ed;
+  transition: 200ms ease-in;
 }
 #portfolio a section h2 {
   color: #1d1f2a;
   font-size: 1.6180339887rem;
   font-weight: 700;
   letter-spacing: normal;
-  margin: 0.25em 0 0.125em;
-  padding: 0;
-  text-align: left;
+  line-height: 1.2em;
+  padding-top: 1.5rem;
   text-transform: none;
 }
 #portfolio a section h2.featured {
   font-size: 2.0581710273rem;
+  line-height: 1.1em;
 }
 #portfolio a section p {
   color: #6c6d75;
-  font-family: "Rubik", sans-serif;
+  padding-bottom: 0.75rem;
 }
 #portfolio a section p.feat-tag {
   font-size: 1.2720196495rem;
-  line-height: 1.3em;
-  padding-bottom: 1.3em;
+  line-height: 1.25em;
+  padding-bottom: 0.625em;
+}
+#portfolio a section:hover {
+  background: #eceef6;
+}
+#portfolio a section:hover h2 {
+  color: #111319;
+}
+#portfolio a section:hover p {
+  color: #45464f;
 }
 #portfolio a:hover {
   border: none;
@@ -737,18 +743,18 @@ nav:not(.contents)#nav-index .right a:hover {
 
 footer {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: max-content auto;
   grid-template-rows: repeat(2, auto);
   margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
   margin-left: 6.25%;
   margin-right: 6.25%;
   border-top: 1px solid #45464f;
+  padding: 0.75rem;
   color: #45464f;
   font-size: 0.7861513778rem;
   letter-spacing: 0.4px;
   line-height: 1.35em;
-  padding-top: 0.75rem;
-  padding-bottom: 1.5rem;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -764,38 +770,35 @@ footer {
   }
 }
 footer .footer-left {
-  grid-area: 2/1/3/3;
+  grid-area: 1/1/2/3;
+  text-transform: uppercase;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   footer .footer-left {
     grid-area: 1/1/3/2;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   footer .footer-left {
     text-align: left;
   }
 }
 footer .footer-right {
-  grid-area: 1/1/2/3;
-  text-transform: uppercase;
+  grid-area: 2/1/3/3;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   footer .footer-right {
     grid-area: 1/2/3/3;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   footer .footer-right {
     text-align: right;
   }
 }
-footer .footer-right .space {
-  padding: 0 0.8em;
-}
-footer .footer-left, footer .footer-right {
-  padding-left: 1%;
-  padding-right: 1%;
+footer .space {
+  padding-left: 0.8em;
+  padding-right: 0.8em;
 }
 
 .about {
